@@ -24,7 +24,7 @@ import android.content.ContextWrapper;
 import android.graphics.Color;
 
 /**
- * Helper class to manage notification channels, and create notifications.
+ * 管理通知通道和创建通知工具类
  */
 class NotificationHelper extends ContextWrapper {
     private NotificationManager manager;
@@ -32,7 +32,7 @@ class NotificationHelper extends ContextWrapper {
     public static final String SECONDARY_CHANNEL = "second";
 
     /**
-     * Registers notification channels, which can be used later by individual notifications.
+     * 注册通知通道, 之后可以被用来创建独立的通知
      *
      * @param ctx The application context
      */
@@ -53,7 +53,7 @@ class NotificationHelper extends ContextWrapper {
     }
 
     /**
-     * Get a notification of type 1
+     * 获取类型为1的通知
      *
      * Provide the builder rather than the notification it's self as useful for making notification
      * changes.
@@ -71,7 +71,7 @@ class NotificationHelper extends ContextWrapper {
     }
 
     /**
-     * Build notification for secondary channel.
+     * 为第二通道创建通知
      *
      * @param title Title for notification.
      * @param body Message for notification.
@@ -86,7 +86,7 @@ class NotificationHelper extends ContextWrapper {
     }
 
     /**
-     * Send a notification.
+     * 发送通知
      *
      * @param id The ID of the notification
      * @param notification The notification object
@@ -96,7 +96,7 @@ class NotificationHelper extends ContextWrapper {
     }
 
     /**
-     * Get the small icon for this app
+     * 获取小图标
      *
      * @return The small icon resource id
      */
@@ -105,9 +105,8 @@ class NotificationHelper extends ContextWrapper {
     }
 
     /**
-     * Get the notification manager.
+     * 获取通知管理
      *
-     * Utility method as this helper works with it a lot.
      *
      * @return The system service NotificationManager
      */

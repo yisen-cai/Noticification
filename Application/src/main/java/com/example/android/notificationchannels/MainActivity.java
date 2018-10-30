@@ -74,7 +74,6 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * Send intent to load system Notification Settings UI for a particular channel.
      * 为特定的通道发送Intent去加载系统通知设置UI
      * @param channel Name of channel to configure
      */
