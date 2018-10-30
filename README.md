@@ -1,6 +1,4 @@
-
 Android NotificationChannels Sample
-===================================
 
 Demonstration of using channels to categorize notifications by topic. This feature was
             added in Android O, and allows users to have fine-grained control over their
@@ -87,3 +85,6 @@ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
 License for the specific language governing permissions and limitations under
 the License.
+=======
+# Noticification
+Android Samples Learning
