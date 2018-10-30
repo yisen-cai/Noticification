@@ -1,27 +1,8 @@
-/*
-* Copyright 2017 The Android Open Source Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*     http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
-
 package com.example.android.notificationchannels;
 
 import android.app.Activity;
 import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -30,9 +11,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-/**
- * Display main screen for sample. Displays controls for sending test notifications.
- */
 public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -42,13 +20,11 @@ public class MainActivity extends Activity {
     private static final int NOTI_SECONDARY2 = 1201;
 
     /*
+     * 用来与UI进行交互的视图model
      * A view model for interacting with the UI elements.
      */
     private MainUi ui;
 
-    /*
-     * A
-     */
     private NotificationHelper noti;
 
     @Override
@@ -60,10 +36,9 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * Send activity notifications.
-     *
-     * @param id The ID of the notification to create
-     * @param title The title of the notification
+     * 发送通知
+     * @param id    要创建的通知id
+     * @param title 通知的标题
      */
     public void sendNotification(int id, String title) {
         Notification.Builder nb = null;
@@ -90,7 +65,7 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * Send Intent to load system Notification Settings for this app.
+     * 为当前app发送Intent去加载系统通知设置
      */
     public void goToNotificationSettings() {
         Intent i = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS);
@@ -100,7 +75,7 @@ public class MainActivity extends Activity {
 
     /**
      * Send intent to load system Notification Settings UI for a particular channel.
-     *
+     * 为特定的通道发送Intent去加载系统通知设置UI
      * @param channel Name of channel to configure
      */
     public void goToNotificationSettings(String channel) {
@@ -111,25 +86,25 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * View model for interacting with Activity UI elements. (Keeps core logic for sample
-     * seperate.)
+     * 视图模型用来与ActivityUI元素交互
+     * 保持核心逻辑简单独立
      */
     class MainUi implements View.OnClickListener {
         final TextView titlePrimary;
         final TextView titleSecondary;
 
         private MainUi(View root) {
-            titlePrimary = (TextView) root.findViewById(R.id.main_primary_title);
-            ((Button) root.findViewById(R.id.main_primary_send1)).setOnClickListener(this);
-            ((Button) root.findViewById(R.id.main_primary_send2)).setOnClickListener(this);
-            ((ImageButton) root.findViewById(R.id.main_primary_config)).setOnClickListener(this);
+            titlePrimary = root.findViewById(R.id.main_primary_title);
+            (root.findViewById(R.id.main_primary_send1)).setOnClickListener(this);
+            (root.findViewById(R.id.main_primary_send2)).setOnClickListener(this);
+            (root.findViewById(R.id.main_primary_config)).setOnClickListener(this);
 
-            titleSecondary = (TextView) root.findViewById(R.id.main_secondary_title);
-            ((Button) root.findViewById(R.id.main_secondary_send1)).setOnClickListener(this);
-            ((Button) root.findViewById(R.id.main_secondary_send2)).setOnClickListener(this);
-            ((ImageButton) root.findViewById(R.id.main_secondary_config)).setOnClickListener(this);
+            titleSecondary = root.findViewById(R.id.main_secondary_title);
+            (root.findViewById(R.id.main_secondary_send1)).setOnClickListener(this);
+            (root.findViewById(R.id.main_secondary_send2)).setOnClickListener(this);
+            (root.findViewById(R.id.main_secondary_config)).setOnClickListener(this);
 
-            ((Button) root.findViewById(R.id.btnA)).setOnClickListener(this);
+            (root.findViewById(R.id.btnA)).setOnClickListener(this);
         }
 
         private String getTitlePrimaryText() {

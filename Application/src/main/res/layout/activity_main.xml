@@ -11,12 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.notificationchannels.MainActivity">
 F
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:rowCount="7"
         android:columnCount="2"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:rowCount="7">
 
         <EditText
             android:id="@+id/main_primary_title"
@@ -29,15 +30,15 @@ F
 
         <Button
             android:id="@+id/main_primary_send1"
-            android:layout_columnWeight="1"
             android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
 
             android:text="@string/main_primary_send1" />
 
         <Button
             android:id="@+id/main_primary_send2"
-            android:layout_columnWeight="1"
             android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
 
             android:text="@string/main_primary_send2" />
 
@@ -48,8 +49,8 @@ F
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
 
-            android:src="@android:drawable/ic_menu_preferences"
-            android:contentDescription="@string/main_primary_config" />
+            android:contentDescription="@string/main_primary_config"
+            android:src="@android:drawable/ic_menu_preferences" />
 
         <Space
             android:layout_width="match_parent"
@@ -68,17 +69,17 @@ F
 
         <Button
             android:id="@+id/main_secondary_send1"
-            android:layout_columnWeight="1"
             android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
 
             android:text="@string/main_secondary_send1" />
 
         <Button
             android:id="@+id/main_secondary_send2"
-            android:layout_columnWeight="1"
             android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
 
-            android:text="@string/main_secondary_send2"/>
+            android:text="@string/main_secondary_send2" />
 
 
         <ImageButton
@@ -88,8 +89,8 @@ F
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
 
-            android:src="@android:drawable/ic_menu_preferences"
-            android:contentDescription="@string/main_secondary_config" />
+            android:contentDescription="@string/main_secondary_config"
+            android:src="@android:drawable/ic_menu_preferences" />
 
     </GridLayout>
 
